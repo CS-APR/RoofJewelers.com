@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="">
+
+        <!--looking to including meta open graph tags. they format preview on links posted to other platforms-->
+
+        <title id="page-title"></title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+            <div id="subheader">
+                <div id="tree-bar"></div>
+            </div> <!-- end subheader-->
+            <div id="productContainer">
+                <div id="productInfo">
+                    <div id="name">
+                        <h1 id="productName"></h1>
+                    </div>
+                    <div id="image"> 
+                        <img id="productImg" src="" onerror="this.src='images/img-placeholder.svg'">
+                        <div id="imgBar"></div>
+                    </div>
+                    <div id="namePrice">
+                        <h3>Description:</h3>                   
+                        <div>
+                            <p id="descriptionScroll"></p>
+                        </div>
+                        
+                        <div id="priceDiv"></div>
+                    </div>
+                </div>
+                <div id="productStatus">
+                    <h3 id="itemID"></h3>
+                    <br>
+                    <h3 id="availibility"></h3>
+                    <h3 id="quantity"></h3>
+                </div>
+            </div>
+            <div id="featured"></div>
+
+            <div id="quickViewContainer" hidden></div>
+
+            <div id="footer-placeholder"></div>
+        </div><!--end main container-->
+    </body>
+    <script src="main.js"></script> <!--loads main.js-->
+    <script>
+        (async function(){
+            await initializePage();
+            await initializeProductPage();
+        })();
+    </script>
+</html>

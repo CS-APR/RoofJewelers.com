@@ -1,0 +1,42 @@
+___________________todo__________________________
+
+
+set up time based updating for the hours page
+
+make it so that tabbar becomes a drop down menu when screen is small
+
+
+when on phone make dropdown menus behave on onclick the same they do onhover
+
+make account system
+make cart system
+make wishlist system
+allow search tracking 
+
+set up attributes
+
+
+
+________________Completed_________________________
+find a way to standardize catagory and link use from one file so that
+    no hunting for links through html pages needs to occur
+    - primarily needed in footer
+
+- set up product page
+
+- make featured items reuseable like the header and footer, shows up on home screen and product pages
+
+- fix search bar not showing searched for items when executed from a non catalog page
+
+- fix sort price range not expanding to the category max when blank search is entered
+
+- make ranked search system so that closest match appears first
+
+- on phone have page bar only show 1,2 ... 3,4,5... 6,7 instead of computer view 5 in middle
+
+- make featured banner across featured items and out of stock banner
+
+- make quick view for catalog page
+
+
+

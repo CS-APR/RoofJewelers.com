@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="Serving the Columbia, SC area’s jewelry needs for over 80 years, Roof Jewelers 
+                offers a wide selection of fine jewelry, repair services and gold buying">
+
+        <!--look into to including meta open graph tags. they format preview on links posted to other platforms-->
+
+        <title>Roof Jewelers | Home</title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+
+            <div class="slidecontainer">
+                <div class="slideshow">
+
+                    <div id="track"></div><!--slideshow-->
+
+                    <img src="images/LeftArrow.png" alt="left arrow" id="left">
+                    <img src="images/RightArrow.png" alt="right arrow" id="right">
+
+                </div>
+            </div> <!-- end slidecontainer-->
+
+            <div style="margin-top: 50px; margin-left: 20%; margin-right: 20%; ">
+                <h1>Welcome to Roof Jewelers!</h1>
+                <div class="about">
+                    <p>
+                        Roof Jewelers, your local experts in fine jewelry for more than 80 years. Fine diamonds and 
+                        gemstones, gold and silver jewelry, pearls, Carolina and Clemson merchandise and more can be 
+                        found at our store, conveniently located near Fort Jackson and Wal-Mart on Forest Drive.
+                    </p>
+                    <p>
+                        We have a tremendous variety of inventory at our convenient location near Forest Acres. You 
+                        may want to pre-shop online before coming in to buy your favorites. Palmetto jewelry, bracelets, 
+                        diamond and gemstone rings and much more are available to browse by selecting the links in the 
+                        navigation and can be ordered over the phone or in person at our store. 
+                    </p>
+                </div>                
+            </div> 
+
+            <div class="ad-container"> <!-- advert images-->
+                <div class="ads">
+                    <a href="catalog.html?slug=bridal-collection"><img src="images/BridalCollection.webp" alt="Bridal ad"></a>
+                </div>
+                <div class="ads">
+                    <a href="catalog.html?slug=necklaces-and-pendants"><img src="images/Shop-Pendants-and-Necklaces.webp" alt="pendant ad"></a>
+                </div>
+            </div> <!-- end advert images--> 
+
+            <div id="featured"></div>
+
+            <div id="quickViewContainer" hidden></div>
+
+            <div class="disclaimer">
+                <p>
+                    Notice: This website is not a complete catalog of all the products available at Roof Jewelers. Some 
+                    items available in-store may not yet be listed online. Also, we strive to keep the website's listings 
+                    as accurate as possible to our in-store inventory and prices, however, please note that listings may not 
+                    always reflect 100% accuracy.
+                </p>
+                <p>
+                    If you have any questions regarding an item you see online call us at <span data-config="store-phone"></span> 
+                    or visit us at <span data-config="store-address"></span>
+                </p>
+            </div>
+
+            <div id="footer-placeholder"></div>
+            
+        </div> <!--end main container-->
+
+        <script src="main.js"></script> <!--loads main.js-->
+        <script>
+            initializePage();
+            loadHomeSlideShow().then(() => {
+                const carousel = initializeCarousel({
+                    'track': document.getElementById("track"),
+                    'lbtn': document.getElementById("left"),
+                    'rbtn': document.getElementById("right"),
+                    'slideWidth': 100,
+                    'unit': '%',
+                    'loop': true,
+                    'cloneCount': 1,
+                    'viewCount': 1
+                });
+                carousel.startAutoPlay();  
+            });
+            
+        </script>   
+    </body>
+</html>

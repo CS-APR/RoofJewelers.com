@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="">
+
+        <!--looking to including meta open graph tags. they format preview on links posted to other platforms-->
+
+        <title id="page-title"></title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+            <div id="subheader">
+                <div id="tree-bar"></div>
+
+                <h1 id="cat-name"></h1>
+                <p id="cat-description"></p>
+                <div id="categories"></div>
+            </div> <!-- end subheader-->
+
+            <div id="content-settings"></div>
+                
+            <div id="product-content"></div>
+
+            <div id="pageBar"></div>
+          
+            <div id="footer-placeholder"></div>
+        </div><!--end main container-->
+
+        <div id="side-tab">
+            <div id="tab-handle">
+                Sort By
+            </div>
+            <div>
+                <div id="price-sort"></div>
+                <div id="attribute-content"></div>
+            </div>
+                
+            
+        </div>
+        <div id="quickViewContainer" hidden></div>
+    </body>
+    <script src="main.js"></script> <!--loads main.js-->
+    <script>
+        (async function(){
+            await initializePage();
+            await initilalizeCatologPage();
+        })();
+
+        sideTab = document.getElementById("side-tab");
+
+        document.getElementById("tab-handle").onclick = function(event){
+            event.stopPropagation();
+            sideTab.classList.toggle("open");          
+        };
+        document.addEventListener(
+            "click", function(event){
+                if( !sideTab.contains(event.target) ) sideTab.classList.remove("open");  
+            }
+        );
+
+    </script>
+</html>

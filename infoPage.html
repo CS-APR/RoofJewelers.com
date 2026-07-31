@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="">
+
+        <title id="page-title"></title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+            
+            <div id="infocontainer"></div>
+
+            <div id="footer-placeholder"></div>
+        </div>
+        <script src="main.js"></script> <!--loads main.js-->
+        <script> 
+            (async function(){
+                await initializePage();
+                await initializeInfoPage(); 
+            })();
+        </script>
+    </body>
+</html>
