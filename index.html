@@ -59,7 +59,9 @@
 
             <div id="featured"></div>
 
-            <div id="quickViewContainer" hidden></div>
+            <div id="quickViewContainer" hidden>
+                <div id="quickViewWindow"></div>
+            </div>
 
             <div class="disclaimer">
                 <p>
@@ -77,24 +79,11 @@
             <div id="footer-placeholder"></div>
             
         </div> <!--end main container-->
+        <div id="toast" hidden>
+            <span id="toastMessage"></span>
+            <button id="toastClose">&times;</button>
+        </div>
 
-        <script src="main.js"></script> <!--loads main.js-->
-        <script>
-            initializePage();
-            loadHomeSlideShow().then(() => {
-                const carousel = initializeCarousel({
-                    'track': document.getElementById("track"),
-                    'lbtn': document.getElementById("left"),
-                    'rbtn': document.getElementById("right"),
-                    'slideWidth': 100,
-                    'unit': '%',
-                    'loop': true,
-                    'cloneCount': 1,
-                    'viewCount': 1
-                });
-                carousel.startAutoPlay();  
-            });
-            
-        </script>   
+        <script type="module" src="javaScript/main.js"></script> <!--loads main.js-->
     </body>
 </html>

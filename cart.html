@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="">
+
+        <title>Roof Jewelers | Cart</title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+            
+            <div id="cartContainer">
+                <h1>Shopping Cart</h1>
+                <div id="cartBox">
+                    <div id="itemTotal">
+                        <div id="cartItems"></div>
+
+                        <div>
+                            <div id="subtotal">
+                                <div id="shippingRow">
+                                    <label for="shippingMethod">Shipping Method: </label>
+                                    <select id="shippingMethod">
+                                        <option value="0">-- Select method --</option>
+                                        <option value="0">-- In-store Pickup --</option>
+                                        <option value="15">-- USPS --</option>
+                                        <option value="20">-- FedEx --</option>
+                                    </select>
+                                </div>
+
+                                <div id="pricing">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotalPrice"></span>
+
+                                    <span>Discount Savings:</span>
+                                    <span id="savings"></span>
+
+                                    <span>Estimated tax:</span>
+                                    <span id="taxPrice"></span>
+
+                                    <span>Shipping:</span>
+                                    <span id="shippingPrice"></span>
+
+                                    <span>Total:</span>
+                                    <strong id="totalPrice"></strong>
+                                </div>                            
+                            </div>
+                            <div id="checkout">
+                                <button id="checkoutButton">Proceed to Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <div id="footer-placeholder"></div>
+        </div> <!-- end main container-->
+        <div id="toast" hidden>
+            <span id="toastMessage"></span>
+            <button id="toastClose">&times;</button>
+        </div>
+        <script type="module" src="javaScript/main.js"></script> <!--loads main.js-->
+    </body>
+</html>
