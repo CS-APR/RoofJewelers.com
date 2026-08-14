@@ -22,6 +22,7 @@
         CONFIG: null,
         imageManifest: null,
         categorySlug: null,
+        attributes: null,
         base: 12, //catalog default display count
         displayCount: 12,
         start: 0,

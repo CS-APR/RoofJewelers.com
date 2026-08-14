@@ -36,6 +36,7 @@ import { initilalizeCatologPage, getFeaturedInventory, renderFeaturedProducts,
         inventory.inventory = await loadJSON("data/inventory.json"); //all inventory
         data.CONFIG = await loadJSON("data/config.json");
         data.imageManifest = await loadJSON("data/imageManifest.json");
+        data.attributes = await loadJSON("data/attributes.json");
     }
 
 //rule to open outside links in a new tab and not track where the user came from
@@ -73,7 +74,7 @@ function setupExternalLinks(){
             const itemClass = topLevel ? "tabitem" : "dropdownitem";
             const dropdownClass = topLevel ? "dropdown" : "subdropdown";
 
-            if(item.children.length > 1){
+            if(item.children.length >= 1){
                 html += `
                     <div class="${itemClass}">
                         <a href="${buildLink(item)}"> ${item.title}</a>
@@ -173,28 +174,6 @@ function setupExternalLinks(){
     function renderInfoPage(category){
         document.getElementById("page-title").textContent = "Roof Jewelers | " + category.title;
         document.querySelector('meta[name="description"]').content = category.description;
-    }
-
-//catalog page subheader funtions
-    //functions for treepath
-    const categoryDescription = {//array storing the desriptions for categories
-            "engagement-rings": `
-                Starting a new life with your true love can be exciting and wonderful! That journey begins with the perfect proposal. A diamond engagement ring is the symbol of your love that's given to last a lifetime. Let us help you select the perfect engagement ring to begin your journey!
-            
-                Roof Jewelers has bridal sets, single solitaires, semi-mounts, and more! We can even design a custom ring based on your ideas. 
-            `,
-            "estate": `
-                Love the styles of days gone by? At Roof Jewelers we have a wide selection of estate and vintage jewelry; to see these beautiful pieces for yourself drop by our showroom. We have an entire vault of estate jewelry and inventory changes frequently, so a much larger selection may be found in-store than can be made available online.
-
-                You know the saying, "They don't make things like they used to." This is your chance to get the highest quality fine jewelry that you can't find anywhere else.      
-            `,
-            "citizen": `All Citizen Watches come with a five year movement warranty.`,
-            "thorsten-rings": `Thorsten Rings is a cutting-edge brand specializing in bands crafted from durable ceramics and alternative metals, with many unique styles and inlays, come find the piece that speaks to you.
-`
-    }
-    function loadCategoryDescription(category){
-        const description = document.getElementById("cat-description");
-        description.innerText = categoryDescription[category.slug] || "";
     }
 
 //catalog page inventory display functions

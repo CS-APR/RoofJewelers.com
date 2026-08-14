@@ -35,7 +35,8 @@ import { getDiscount, addCartListners } from "./cart.js";
 
         for(const child of category) {
             for (const item of inventory.inventory){
-                if(getProductCategory(item, child.id)) inventory.catInventory.push(item);
+                if(getProductCategory(item, child.id) && (!inventory.catInventory.includes(item))) 
+                    inventory.catInventory.push(item);
             }
             searchCategoryInventory(child.children);
         } 
@@ -52,13 +53,14 @@ import { getDiscount, addCartListners } from "./cart.js";
 
         const priceChecked = [...document.querySelectorAll(".sortPrice:checked")];
         const viewChecked = [...document.querySelectorAll(".sortView:checked")];
+        const selectedAtt = getSelectedAttributes();
         const filterPool = getCurrentInventory();
 
         if (priceChecked.length === 0 &&
-                viewChecked.length === 0) {//show everything 
+                viewChecked.length === 0 &&
+                selectedAtt.length === 0) {//show everything 
             inventory.sortedInventory = [...filterPool];
         } else {
-            console.log("getting sorted");
             inventory.sortedInventory = filterPool.filter(item => {
                 const priceMatch = priceChecked.length === 0 || priceChecked.some(box => {
                     const min = Number(box.dataset.min) || 0;
@@ -66,23 +68,98 @@ import { getDiscount, addCartListners } from "./cart.js";
                     return isItemInRange(item, min, max);
                 });
 
-                const viewMatch = viewChecked.length === 0 || viewChecked.some(box => {
-                    return isItemInStock(item);
-                });
+                const viewMatch = viewChecked.length === 0 || viewChecked.some(() => isItemInStock(item));
 
-                return priceMatch && viewMatch;
+                const attMatch = itemMatchesAttributes(item, selectedAtt);
+
+                return priceMatch && viewMatch && attMatch;
             });
         } //end else
 
         rebuildActiveInventory();
     }
 
+    function getItemAttIds(item){
+        console.log(item.Attribute);
+        return item.Attribute || [];
+    }
+    function inventoryHasAttribute(inventoryList, attId){
+        return inventoryList.some(item => getItemAttIds(item).includes(attId));
+    } 
+    function groupHasMatch(inventoryList, node) {
+        if (inventoryHasAttribute(inventoryList, node.id)) return true;
+        return (node.children || []).some(child => groupHasMatch(inventoryList, child));
+    }
+    function getSelectedAttributes() {
+        return [...document.querySelectorAll(".sortAtt:checked")].map(box => box.value);
+    }
+    function itemMatchesAttributes(item, selectedAtt) {
+        if (selectedAtt.length === 0) return true;
+        const itemAtt = getItemAttIds(item);
+        return selectedAtt.some(att => itemAtt.includes(att));
+    }
+
+    function renderAttributeNode(node, selectedInventory, depth = 0) {
+        const hasChildren = node.children && node.children.length > 0;
+        const isRoot = depth === 0;
+
+        if (isRoot) {
+            const childHtml = node.children
+                .map(child => renderAttributeNode(child, selectedInventory, depth+1)).join("");
+
+            if (!childHtml) return "";
+            
+            return `
+                <fieldset class="attGroup">
+                    <legend> Sort by ${node.title} </legend>
+                    <div class="attGroupItems">
+                        ${childHtml}
+                    </div>
+                </fieldset>
+            `;
+        }
+
+        if (hasChildren) {
+            if (!groupHasMatch(selectedInventory, node)) return "";
+        
+            const childHtml = node.children
+                .map(child => renderAttributeNode(child, selectedInventory, depth+1)).join("")
+              
+            return `
+                <div class="attNode">
+                    <div class="attOption">
+                        <input type="checkBox" class="sortAtt" id="${node.id}" value="${node.id}">
+                        <label for="${node.id}">${node.title}</label>
+                    </div>
+                    <div class="attChildren">
+                        ${childHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        if (!inventoryHasAttribute(selectedInventory, node.id)) return "";
+
+        return `
+            <div class="attOption attLeaf">
+                <input type="checkbox" class="sortAtt" id="${node.id}" value="${node.id}">
+                <label for="${node.id}">${node.title}</label>
+            </div>
+        `;
+    }
+
     export async function renderAtributeTab(){ //loads the html for the attribute side tab
-        const price = document.getElementById("price-sort");
-        if (!price) return false;
+        const tab = document.getElementById("sortContainer");
+        if (!tab) return false;
+
+        const currentInventory = getCurrentInventory();
 
         const view = document.getElementById("view-sort");
-        const tab = document.getElementById("attribute-content");
+        const price = document.getElementById("price-sort");
+        const attribute = document.getElementById("attribute-content");
+
+        const groupsHtml = data.attributes
+            .map(group => renderAttributeNode(group, currentInventory)).join("");
 
         view.innerHTML = `
             <fieldset>
@@ -99,35 +176,47 @@ import { getDiscount, addCartListners } from "./cart.js";
             <fieldset>
                 <legend> Sort by price </legend>
 
-                <div>
+                <div class="viewOption">
                     <input type="checkbox" class="sortPrice" id="0to100"
                         data-min="0" data-max="100">
                     <label for="0to100"> $0 to $100 </label>
                 </div>
-                <div>
+                <div class="viewOption">
                     <input type="checkbox" class="sortPrice" id="100to500"
                         data-min="100" data-max="500">
                     <label for="100to500"> $100 to $500 </label>
                 </div>
-                <div>
+                <div class="viewOption">
                     <input type="checkbox" class="sortPrice" id="500to1000"
                         data-min="500" data-max="1000">
                     <label for="500to1000"> $500 to $1000 </label>
                 </div>
-                <div>
+                <div class="viewOption">
                     <input type="checkbox" class="sortPrice" id="1000to5000"
                         data-min="1000" data-max="5000">
                     <label for="1000to5000"> $1000 to $5000 </label>
                 </div>
-                <div>
+                <div class="viewOption">
                     <input type="checkbox" class="sortPrice" id="5000up"
                         data-min="5000">
                     <label for="5000up"> $5000+ </label>
                 </div>
             </fieldset>
         `;     
+
+        attribute.innerHTML = `${groupsHtml}`;
+
         checkListeners("sortPrice");
         checkListeners("sortView");
+        document.addEventListener("change", function(event) {
+            if (!event.target.classList.contains("sortAtt")) return;
+
+            requestAnimationFrame(() => {
+                syncAttributeTree();
+                page.resetPage = true;
+                getSortedInventory(true);
+            });
+        });
     }
     export function isItemInRange(item, min = 0, max = Infinity){
         const price = getDiscount(item);
@@ -138,12 +227,24 @@ import { getDiscount, addCartListners } from "./cart.js";
         return item.Stock > 0;
     }
     export function checkListeners(className) {
-        console.log("appliing listner to sort");
         document.addEventListener("change", event =>{
             console.log("sorting");
             if (!event.target.classList.contains(className)) return;
             page.resetPage = true;
             getSortedInventory(page.resetPage);
+        });
+    }
+
+    function syncAttributeTree() {
+        document.querySelectorAll(".attNode").forEach(node => {
+            const checkbox = node.querySelector(".attOption .sortAtt");
+            const children = node.querySelector(".attChildren");
+            if (!children) return;
+
+            const descendantChecked = node.querySelector(".attChildren .sortAtt:checked") !== null;
+
+            const open = Boolean(checkbox?.checked || descendantChecked);
+            node.classList.toggle("open", open);
         });
     }
 
@@ -316,7 +417,7 @@ import { getDiscount, addCartListners } from "./cart.js";
         for (const item of products){
             let price = getDiscount(item);
 
-            if (price <= 0) item.Retail <= 0 ? price = "Price Not Available" : price = item.Retail;
+            if (price <= 0) item.Retail <= 0 ? price = "Price Not Availabel" : price = item.Retail;
 
             if (typeof(price) != "string") price = moneyFormat(price);
 
