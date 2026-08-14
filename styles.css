@@ -1094,8 +1094,7 @@ p{
                 top: 150px;
                 left: -265px;
                 width: 250px;
-                min-height: 200px;
-                height: auto;
+                max-height: calc(100vh - 180px);
                 background: white;
                 transition: left 0.5s ease;
                 z-index: 1000;
@@ -1121,7 +1120,7 @@ p{
                 cursor: pointer;               
             }
 
-            #cat-desription:empty{
+            #cat-description:empty{
                 margin-top: 0px;
             }
             #cat-description:not(:empty){
@@ -1132,29 +1131,53 @@ p{
             #side-tab #sortContainer{
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 8px;
+                max-height: calc(100vh - 220px);
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding-right: 6px;
             }
 
-            #side-tab fieldset {
+            /* top level */
+            #side-tab #view-sort fieldset,
+            #side-tab #price-sort fieldset{
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
             }
+
             #side-tab input{
                 cursor: pointer;
             }
-            #side-tab fieldset div{
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
+
             #side-tab label{
                 cursor: pointer;
                 font-size: 13pt;
             }
+
             #side-tab legend {
                 font-size: 15pt;
             }
+
+            /* attribute section */ 
+            #attribute-content,
+            #attribute-content .attGroupItems,
+            #attribute-content .attNode{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;            
+            }
+
+            #attribute-content .attChildren{
+                display: none;
+                flex-direction: column;
+                gap: 8px;
+                padding-left:20px;
+            }   
+
+            #attribute-content .attNode.open > .attChildren{
+                display: flex;
+            } 
 
         /* end of side tab formatting*/
 
