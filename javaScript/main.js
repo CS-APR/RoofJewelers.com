@@ -29,6 +29,7 @@ import { initilalizeCatologPage, getFeaturedInventory, renderFeaturedProducts,
 
     async function loadJSON(file){
         const response = await fetch(file);
+        console.log(response);
         return await response.json();
     }
     async function generateJson(){
