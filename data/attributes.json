@@ -1,0 +1,102 @@
+[
+  {
+    "id": "metal",
+    "title": "Metal Type",
+    "children": [
+      {
+        "id": "metal-silver",
+        "title": "Sterling Silver",
+        "children": []
+      },
+      {
+        "id": "metal-gold",
+        "title": "Gold",
+        "children": [
+          {
+            "id": "metal-gold-10k",
+            "title": "10k",
+            "children": []
+          },
+          {
+            "id": "metal-gold-14k",
+            "title": "14k",
+            "children": []
+          },
+          {
+            "id": "metal-gold-18k",
+            "title": "18k",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "metal-platinum",
+        "title": "Platinum",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "gender",
+    "title": "Gender",
+    "children": [
+      {
+        "id": "gender-mens",
+        "title": "Mens",
+        "children": []
+      },
+      {
+        "id": "gender-ladies",
+        "title": "Ladies",
+        "children": []
+      },
+      {
+        "id": "gender-uni",
+        "title": "Unisex",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "color",
+    "title": "Color",
+    "children": [
+      {
+        "id": "color-white",
+        "title": "White",
+        "children": []
+      },
+      {
+        "id": "color-yellow",
+        "title": "Yellow",
+        "children": []
+      },
+      {
+        "id": "color-twotone",
+        "title": "Two-tone",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "movement",
+    "title": "Movement Type",
+    "children": [
+      {
+        "id": "movement-quartz",
+        "title": "Quartz",
+        "children": []
+      },
+      {
+        "id": "movement-eco",
+        "title": "Eco Drive",
+        "children": []
+      },
+      {
+        "id": "movement-automatic",
+        "title": "Automatic",
+        "children": []
+      }
+    ]
+  }
+]

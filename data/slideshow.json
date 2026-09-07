@@ -5,11 +5,11 @@
   },
   {
     "image": "citizen-banner.jpg",
-    "link": ""
+    "link": "/catalog.html?slug\u003dcitizen"
   },
   {
     "image": "southern-gates-banner.jpg",
-    "link": ""
+    "link": "/catalog.html?slug\u003dsouthern-gates"
   },
   {
     "image": "Bridal.jpg",
@@ -25,6 +25,6 @@
   },
   {
     "image": "pearl-jewelry.jpg",
-    "link": ""
+    "link": "/catalog.html?slug\u003dpearls"
   }
 ]

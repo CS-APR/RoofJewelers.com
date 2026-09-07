@@ -4,33 +4,46 @@
     "title": "Home",
     "link": "index.html",
     "description": "Serving the Columbia, SC area\u0027s jewelry needs for over 80 years, Roof Jewelers offers a wide selection of fine jewelry, repair services and gold buying",
+    "discount": 0,
     "children": []
   },
   {
     "id": "showroom",
     "title": "Showroom",
+    "link": "",
     "description": "",
     "slug": "showroom",
+    "lslug": "",
     "showInNav": false,
+    "discount": 0,
     "children": [
       {
         "id": "bridal-collection",
         "title": "Bridal Collection",
+        "link": "",
         "description": "",
         "slug": "bridal-collection",
+        "lslug": "",
+        "showInNav": true,
+        "discount": 0,
         "children": [
           {
             "id": "bridal-sets",
             "title": "Bridal Sets",
             "description": "",
             "slug": "bridal-sets",
+            "discount": 0,
             "children": []
           },
           {
             "id": "bridal-engagement-rings",
             "title": "Engagement Rings",
-            "description": "",
+            "link": "",
+            "description": "Starting a new life with your true love can be exciting and wonderful! That journey begins with the perfect proposal. A diamond engagement ring is the symbol of your love that\u0027s given to last a lifetime. Let us help you select the perfect engagement ring to begin your journey!\n            \nRoof Jewelers has bridal sets, single solitaires, semi-mounts, and more! We can even design a custom ring based on your ideas.",
             "slug": "engagement-rings",
+            "lslug": "",
+            "showInNav": true,
+            "discount": 0,
             "children": []
           },
           {
@@ -38,6 +51,7 @@
             "title": "Insert \u0026 Guard Rings",
             "description": "",
             "slug": "insert-and-guard-rings",
+            "discount": 0,
             "children": []
           },
           {
@@ -45,12 +59,16 @@
             "title": "Wedding Bands",
             "description": "",
             "slug": "wedding-bands",
+            "discount": 0,
             "children": [
               {
                 "id": "bridal-wedding-gents-bands",
                 "title": "Gents Bands",
+                "link": "",
                 "description": "",
                 "slug": "gents-bands",
+                "showInNav": true,
+                "discount": 0,
                 "children": []
               },
               {
@@ -58,6 +76,7 @@
                 "title": "Ladies Bands",
                 "description": "",
                 "slug": "ladies-bands",
+                "discount": 0,
                 "children": []
               }
             ]
@@ -67,6 +86,7 @@
             "title": "Loose Diamonds",
             "description": "Explore our Selection of Loose Diamonds and other Stones available at Roof Jewelers.",
             "lslug": "loose-stones",
+            "discount": 0,
             "children": []
           }
         ]
@@ -74,20 +94,25 @@
       {
         "id": "jewelry",
         "title": "Jewelry",
+        "link": "",
         "description": "",
         "slug": "jewelry",
+        "showInNav": true,
+        "discount": 0,
         "children": [
           {
             "id": "jewelry-bracelets-and-anklets",
             "title": "Bracelets \u0026 Anklets",
             "description": "",
             "slug": "bracelets-and-anklets",
+            "discount": 0,
             "children": [
               {
                 "id": "jewelry-bracelets-and-anklets-bracelets",
                 "title": "Bracelets",
                 "description": "",
                 "slug": "bracelets",
+                "discount": 0,
                 "children": []
               },
               {
@@ -95,6 +120,7 @@
                 "title": "Charm Bracelets",
                 "description": "",
                 "slug": "charm-bracelets",
+                "discount": 0,
                 "children": []
               },
               {
@@ -102,13 +128,17 @@
                 "title": "Anklets",
                 "description": "",
                 "slug": "anklets",
+                "discount": 0,
                 "children": []
               },
               {
                 "id": "jewelry-bracelets-and-anklets-lestage-convertibles",
                 "title": "Lestage Convertibles",
+                "link": "",
                 "description": "",
                 "slug": "lestage-convertibles",
+                "showInNav": true,
+                "discount": 0,
                 "children": []
               }
             ]
@@ -118,6 +148,7 @@
             "title": "Charms",
             "description": "",
             "slug": "charms",
+            "discount": 0,
             "children": []
           },
           {
@@ -125,6 +156,7 @@
             "title": "Children\u0027s Jewelry",
             "description": "",
             "slug": "childrens-jewelry",
+            "discount": 0,
             "children": []
           },
           {
@@ -132,6 +164,7 @@
             "title": "Class Rings",
             "description": "At Roof Jewelers, we offer an exceptional value in class rings. With a highly customizable catalog to choose from you can put together the perfect ring.",
             "lslug": "class-rings",
+            "discount": 0,
             "children": []
           },
           {
@@ -139,6 +172,7 @@
             "title": "Rings",
             "description": "",
             "slug": "rings",
+            "discount": 0,
             "children": []
           },
           {
@@ -146,6 +180,7 @@
             "title": "Earrings",
             "description": "",
             "slug": "earrings",
+            "discount": 0,
             "children": []
           },
           {
@@ -153,6 +188,7 @@
             "title": "Engravables",
             "description": "",
             "slug": "engravables",
+            "discount": 0,
             "children": []
           },
           {
@@ -160,6 +196,7 @@
             "title": "Men\u0027s Jewelry",
             "description": "",
             "slug": "mens-jewelry",
+            "discount": 0,
             "children": []
           },
           {
@@ -167,12 +204,14 @@
             "title": "Necklaces \u0026 Pendants",
             "description": "",
             "slug": "necklaces-and-pendants",
+            "discount": 0,
             "children": [
               {
                 "id": "jewelry-necklaces-and-pendants-necklaces",
                 "title": "Necklaces",
                 "description": "",
                 "slug": "necklaces",
+                "discount": 0,
                 "children": []
               },
               {
@@ -180,6 +219,7 @@
                 "title": "Chains",
                 "description": "",
                 "slug": "chains",
+                "discount": 0,
                 "children": []
               },
               {
@@ -187,6 +227,7 @@
                 "title": "Lockets",
                 "description": "",
                 "slug": "lockets",
+                "discount": 0,
                 "children": []
               },
               {
@@ -194,6 +235,7 @@
                 "title": "Pendants",
                 "description": "",
                 "slug": "pendants",
+                "discount": 0,
                 "children": []
               },
               {
@@ -201,6 +243,7 @@
                 "title": "Religious",
                 "description": "",
                 "slug": "religious",
+                "discount": 0,
                 "children": []
               }
             ]
@@ -210,6 +253,7 @@
             "title": "Pearls",
             "description": "",
             "slug": "pearls",
+            "discount": 0,
             "children": []
           }
         ]
@@ -219,26 +263,17 @@
         "title": "Watches",
         "description": "",
         "slug": "watches",
+        "discount": 0,
         "children": [
           {
-            "id": "watches-mens",
-            "title": "Mens\u0027 Watches",
+            "id": "watches-accessories",
+            "title": "Watch Accessories",
+            "link": "",
             "description": "",
-            "slug": "mens-watches",
-            "children": []
-          },
-          {
-            "id": "watches-ladies",
-            "title": "Ladies\u0027 Watches",
-            "description": "",
-            "slug": "ladies-watches",
-            "children": []
-          },
-          {
-            "id": "watches-watch-bands",
-            "title": "Watch Bands",
-            "description": "",
-            "slug": "watch-bands",
+            "slug": "watch-accessories",
+            "lslug": "",
+            "showInNav": true,
+            "discount": 0,
             "children": []
           }
         ]
@@ -246,14 +281,19 @@
       {
         "id": "estate",
         "title": "Estate",
-        "description": "",
+        "link": "",
+        "description": "Love the styles of days gone by? At Roof Jewelers we have a wide selection of estate and vintage jewelry; to see these beautiful pieces for yourself drop by our showroom. We have an entire vault of estate jewelry and inventory changes frequently, so a much larger selection may be found in-store than can be made available online.\n\nYou know the saying, \"They don\u0027t make things like they used to.\" This is your chance to get the highest quality fine jewelry that you can\u0027t find anywhere else.",
         "slug": "estate",
+        "lslug": "",
+        "showInNav": true,
+        "discount": 0,
         "children": [
           {
             "id": "estate-rings",
             "title": "Rings",
             "description": "",
             "slug": "rings",
+            "discount": 0,
             "children": []
           },
           {
@@ -261,6 +301,7 @@
             "title": "Earrings",
             "description": "",
             "slug": "earrings",
+            "discount": 0,
             "children": []
           },
           {
@@ -268,6 +309,7 @@
             "title": "Necklaces \u0026 Pendants",
             "description": "",
             "slug": "necklaces-and-pendants",
+            "discount": 0,
             "children": []
           },
           {
@@ -275,6 +317,7 @@
             "title": "Pins",
             "description": "",
             "slug": "pins",
+            "discount": 0,
             "children": []
           },
           {
@@ -282,6 +325,7 @@
             "title": "Miscellaneous",
             "description": "",
             "slug": "miscellaneous",
+            "discount": 0,
             "children": []
           }
         ]
@@ -293,12 +337,14 @@
     "title": "Services \u0026 Repair",
     "description": "",
     "lslug": "services-and-repair",
+    "discount": 0,
     "children": [
       {
         "id": "services-and-repair-financing",
         "title": "Financing Options",
         "description": "Explore flexible financing options at Roof Jewelers with Snap Finance or our convenient in-store layaway service. Shop confidently for your jewelry and gifts.",
         "lslug": "financing-options",
+        "discount": 0,
         "children": []
       },
       {
@@ -306,6 +352,7 @@
         "title": "Jewelry Repair",
         "description": "Experts in jewelry repair since 1943 Roof Jewelers is the place for reliable and quality service. Repair services include: chain repair, ring sizing, prong repair, stone replacement, pearl restringing, and engraving.",
         "lslug": "jewelry-repair",
+        "discount": 0,
         "children": []
       },
       {
@@ -313,6 +360,7 @@
         "title": "Jewelry Care Products",
         "description": "",
         "slug": "jewelry-care-products",
+        "discount": 0,
         "children": []
       },
       {
@@ -320,6 +368,7 @@
         "title": "Watch Repair",
         "description": "With 80 years of experience Roof Jewelers offers expert watch repair. From band, battery and crystal replacement to band repair. Visit us for reliable quality service.",
         "lslug": "watch-repair",
+        "discount": 0,
         "children": []
       }
     ]
@@ -327,28 +376,41 @@
   {
     "id": "brands",
     "title": "Brands",
+    "link": "",
     "description": "Discover a wide selection of premium brands at Roof Jewelers. Explore quality craftsmanship and timeless designs with us.",
     "lslug": "brands",
+    "showInNav": true,
+    "discount": 0,
     "children": [
       {
         "id": "brands-citizen",
         "title": "Citizen",
-        "description": "",
+        "link": "",
+        "description": "All Citizen Watches come with a five year movement warranty.",
         "slug": "citizen",
+        "lslug": "",
+        "showInNav": true,
+        "discount": 25,
         "children": []
       },
       {
         "id": "brands-classic-of-new-york",
         "title": "Classic of New York",
+        "link": "",
         "description": "",
         "slug": "classic-of-new-york",
+        "showInNav": true,
+        "discount": 0,
         "children": []
       },
       {
         "id": "brands-goldman",
         "title": "Goldman Wedding Bands",
+        "link": "",
         "description": "",
         "slug": "goldman-wedding-bands",
+        "showInNav": true,
+        "discount": 0,
         "children": []
       },
       {
@@ -356,13 +418,17 @@
         "title": "Inox - Men\u0027s Jewelry",
         "description": "",
         "slug": "inox-mens-jewelry",
+        "discount": 0,
         "children": []
       },
       {
         "id": "brands-kiddie-kraft",
         "title": "Kiddie Kraft",
+        "link": "",
         "description": "",
         "slug": "kiddie-kraft",
+        "showInNav": true,
+        "discount": 0,
         "children": []
       },
       {
@@ -370,6 +436,7 @@
         "title": "Lafonn",
         "description": "",
         "slug": "lafonn",
+        "discount": 0,
         "children": []
       },
       {
@@ -377,6 +444,7 @@
         "title": "Rembrand Charms",
         "link": "https://www.rembrandtcharms.com/",
         "description": "",
+        "discount": 0,
         "children": []
       },
       {
@@ -384,20 +452,29 @@
         "title": "Royal Chain",
         "description": "",
         "slug": "royal-chain",
+        "discount": 0,
         "children": []
       },
       {
         "id": "brands-southern-gates",
         "title": "Southern Gates",
+        "link": "",
         "description": "",
         "slug": "southern-gates",
+        "lslug": "",
+        "showInNav": true,
+        "discount": 0,
         "children": []
       },
       {
         "id": "brands-thorsten",
         "title": "Thorsten Rings",
-        "description": "",
+        "link": "",
+        "description": "Thorsten Rings is a cutting-edge brand specializing in bands crafted from durable ceramics and alternative metals, with many unique styles and inlays, come find the piece that speaks to you.",
         "slug": "thorsten-rings",
+        "lslug": "",
+        "showInNav": true,
+        "discount": 0,
         "children": []
       }
     ]
@@ -408,6 +485,7 @@
     "description": "Explore the history of Roof Jewelers, serving Columbia, SC since 1943. On the fourth generation, we offer exceptional service, fine jewelry, and watch repair.",
     "lslug": "about-us",
     "showInNav": false,
+    "discount": 0,
     "children": []
   },
   {
@@ -416,6 +494,7 @@
     "description": "Operating Hours of Roof Jewelers Columbia, SC",
     "lslug": "store-hours",
     "showInNav": false,
+    "discount": 0,
     "children": []
   },
   {
@@ -424,6 +503,7 @@
     "description": "",
     "lslug": "faq",
     "showInNav": false,
+    "discount": 0,
     "children": []
   }
 ]
