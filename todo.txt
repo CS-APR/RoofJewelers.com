@@ -4,16 +4,13 @@ ___________________todo__________________________
 set up time based updating for the hours page
 
 make it so that tabbar becomes a drop down menu when screen is small
-
-
 when on phone make dropdown menus behave on onclick the same they do onhover
 
 make account system
-make cart system
-make wishlist system
+
 allow search tracking 
 
-set up attributes
+add toggle button to search for by category or whole inventory
 
 
 
@@ -37,6 +34,14 @@ find a way to standardize catagory and link use from one file so that
 - make featured banner across featured items and out of stock banner
 
 - make quick view for catalog page
+
+- allow sort by in-stock
+
+- make cart system
+
+- make wishlist system
+
+- set up attributes
 
 
 
