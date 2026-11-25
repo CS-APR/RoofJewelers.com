@@ -162,6 +162,117 @@ p{
         }
     /* end search bar styling*/
 
+    /* account box styling */
+        #accountBox.open{
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #accountBox.open input{
+            height: 25px;
+            width: 95%;
+        }
+
+        #showPasswordRow {
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: fit-content;
+            gap: 6px;
+        }
+
+        #showPasswordRow label {
+            font-size: 10pt;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        #showPasswordRow input {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        #accountBox.open p{
+            margin: 0px;
+            font-size: 11pt;
+            color: darkslategray;
+            font-weight: bold;
+        }
+
+        #accountBox.open #signinForgot {
+            display: grid;
+            grid-template-areas: 
+                "signin signin"
+                "forgot register";
+        }
+
+        #accountBox.open #forgotPass a {
+            grid-area: forgot;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 8pt;
+            color: black;
+        }
+
+        #accountBox.open #forgotPass a:hover {
+            color: darkslategray;
+        }
+
+        #accountBox.open #signInButton {
+            grid-area: signin;
+            margin-left: auto;
+
+            font-size: 12pt;
+            color: white;
+            width: fit-content;
+
+            background: black;
+
+            margin-top: 5px;
+            padding: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+
+        }
+
+        #accountBox.open #signInButton:hover {
+            background: darkslategray;
+        }
+
+        #accountBox.open #signOutButton:hover {
+            color: darkslategray;
+            cursor: pointer;
+        }
+
+        #accountBox.open #register a {
+            grid-area: register;
+
+            text-align: end;
+
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 8pt;
+            color: black;
+        }
+
+        #accountBox.open #register a:hover {
+            color: darkslategray;
+        }
+
+
+    /* end account box styling */
+
     /* cart icon styling */
         .tabitem #cartButton{
             position: relative;
@@ -205,13 +316,6 @@ p{
             color: darkslategray;
         }
 
-        #accountBox.open{
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 5px;
-        }
-
         #cartNavBox{
             display: none;
             position:absolute;
@@ -228,7 +332,6 @@ p{
         #cartNavBox.open{
             display: flex;
             flex-direction: column;
-            
         }
         #cartNavBox.open a{
             display: block;
@@ -390,6 +493,9 @@ p{
         font-size: 13pt;
         line-height: 2;
         text-decoration: none;
+    }
+    .footer a:hover{
+        color: darkslategray;
     }
     .footer #credit{
         margin-top: 100px;
@@ -669,6 +775,7 @@ p{
     }
     .cartRemove:hover, .moveWish:hover, .moveCart:hover{
         background: whitesmoke;
+        cursor: pointer;
     }
 
     #emptyCart{
@@ -933,10 +1040,10 @@ p{
             .ribbon-sold, .ribbon-featured{
                 position: absolute;
 
-                top: 15px;
-                right: -30px;
+                top: 25px;
+                right: -35px;
 
-                width: 120px;
+                width: 150px;
 
                 transform: rotate(45deg);
 
@@ -1005,6 +1112,7 @@ p{
             .pageNumbers:hover, #prev:hover, #next:hover{
                 background-color: whitesmoke;
                 color: darkslategray;
+                cursor: pointer;
             }
             #pageBar .pageNumbers{
                 width: 25px;
@@ -1460,6 +1568,127 @@ p{
             }
 
 /* end product page formating */
+
+
+/* register page formating*/
+
+    #registerContainer{
+        width:90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #registerContainer h1{
+        padding-bottom: 15px;
+        border-bottom: 1px black solid;
+    }
+
+    #registerPanel {
+        border: 1px black solid;
+        border-radius: 5px;
+
+        width: 50%;
+        height: fit-content;
+
+        margin-right: auto;
+        margin-left: auto;
+
+        overflow: hidden;
+    }
+
+    #registerNotice{
+        grid-area: notice;
+        background: whitesmoke;
+        border-bottom: 1px black solid;
+        padding: 8px;
+        padding-bottom: 5px;
+    }
+    #registerNotice p, #registerContainer #registerNotice p strong{
+        color: darkslategray;
+        margin: 0px;
+    }
+
+    #registerPanel #inputContainer {
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "first last"
+            "email username"
+            "pass cpass"
+            ". reg";
+        padding: 10px;
+        gap: 10px;
+    }
+    #inputContainer input {
+        border-radius: 0px;
+        border: 1px lightgray solid;
+        margin-top: 5px;
+        display: block;
+        height: 30px;
+        width: 90%;
+    }
+
+    #inputContainer #firstNameField{
+        grid-area: first;
+        font-weight: bold;
+    }
+
+    #inputContainer #lastNameField{
+        grid-area: last;
+        font-weight: bold;
+    }
+
+    #inputContainer #emailField{
+        grid-area: email;
+        font-weight: bold;
+    }
+
+    #inputContainer #userNameField{
+        grid-area: username;
+        font-weight: bold;
+    }
+
+    #inputContainer #passwordField{
+        grid-area: pass;
+        font-weight: bold;
+    }
+
+    #inputContainer #confirmPasswordField{
+        grid-area: cpass;
+        font-weight: bold;
+    }
+
+    #inputContainer #confirmRegister {
+        font-family: 'playful-display';
+        grid-area: reg;
+        padding: 3px;
+        width: fit-content;
+        justify-self: end;
+        border: 0;
+
+        color: white;
+        background: black;
+        font-size: 14pt;
+        cursor: pointer;
+    }
+
+    #inputContainer #confirmRegister:hover:not(:disabled) {
+        background: darkslategray;
+    }
+
+    #inputContainer #confirmRegister:disabled {
+        cursor: wait;
+        opacity: 0.65;
+    }
+
+    #inputContainer p {
+        margin: 0px;
+        font-size: 8pt;
+        line-height: 1.5;
+    }
+
+/* end register page formating*/
 
 
 /* cosmetic classes*/

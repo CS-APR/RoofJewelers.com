@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Coded by APR-->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+                content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="">
+
+        <title>Roof Jewelers | Register</title>
+
+        <link rel="icon" type="image/png" href="images/rj-favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div id="header-placeholder"></div>
+            
+            <div id="registerContainer">
+                <h1>Register</h1>
+                <form id="registerPanel">
+                    <div id="registerNotice">
+                        <p> Please enter your information below:</p>
+                        <p> <strong>Note:</strong> Fields marked with a * are required </p>
+                    </div>
+                    
+                    <div id="inputContainer">
+                        <div id="firstNameField">
+                            First Name *
+                            <input type="text" id="firstNameInput" autocomplete="given-name" required>
+                            <p>* Minimum 2 characters</p>
+                        </div>
+                        <div id="lastNameField">
+                            Last Name *
+                            <input type="text" id="lastNameInput" autocomplete="family-name" required>
+                            <p>* Minimum 2 characters</p>
+                        </div>
+
+                        <div id="emailField">
+                            Email *
+                            <input type="email" id="emailInput" autocomplete="email" required>
+                            
+                        </div>
+                        <div id="userNameField">
+                            Username *
+                            <input type="text" id="usernameInput" autocomplete="username" required>
+                        </div>
+
+                        <div id="passwordField">
+                            Password *
+                            <input type="password" id="passwordInput" autocomplete="new-password" required>
+                            <p>* Minimum 8 characters long and contains 
+                                at least 1 letter, number and special character</p>
+                        </div>
+                        <div id="confirmPasswordField">
+                            Confirm Password *
+                            <input type="password" id="confirmPasswordInput" autocomplete="new-password" required>
+                        </div>
+                        <button type="button" id="confirmRegister">
+                            Sign Up
+                        </button>
+                    </div>
+
+                </form>
+            </div>  
+
+            <div id="footer-placeholder"></div>
+        </div> <!-- end main container-->
+        <div id="toast" hidden>
+            <span id="toastMessage"></span>
+            <button id="toastClose">&times;</button>
+        </div>
+        <script type="module" src="javaScript/main.js"></script> <!--loads main.js-->
+    </body>
+</html>
